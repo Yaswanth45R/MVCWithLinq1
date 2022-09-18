@@ -5,7 +5,7 @@
 }
 
 <h2 style="text-align:center;background-color:yellowgreen;color:orangered">Add New Student</h2>
-@using (Html.BeginForm())
+@using (Html.BeginForm("AddStudent", "Student", FormMethod.Post, new {enctype="multipart/form-data"}))
 {
     <div>@Html.LabelFor(S => S.Sid)<br />@Html.TextBoxFor(S => S.Sid)</div>
     <div>@Html.LabelFor(S => S.Name)<br />@Html.TextBoxFor(S => S.Name)</div>
