@@ -35,8 +35,9 @@ namespace MVCWithLinq1.Controllers
                     Directory.CreateDirectory(PhysicalPath);
                 }
                 SelectedFile.SaveAs(PhysicalPath + SelectedFile.FileName);
+                student.Photo = SelectedFile.FileName;
             }
-            student.Photo = SelectedFile.FileName;
+            
             student.Status = true;
             obj.AddStudent(student);
             return RedirectToAction("DisplayStudents");

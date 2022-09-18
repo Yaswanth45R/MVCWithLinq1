@@ -20,7 +20,7 @@
         <td>@Html.DisplayFor(s => student.Name)</td>
         <td>@Html.DisplayFor(s => student.Class)</td>
         <td>@Html.DisplayFor(s => student.Fees)</td>
-        <td><img src="Uploads/@student.Photo" width="40"height="25" alt="No Image"/></td>
+        <td><img src="/Uploads/@student.Photo" width="40"height="25" alt="No Image"/></td>
         <td>
             @Html.ActionLink("View", "DisplayStudent", new {Sid=student.Sid})
             @Html.ActionLink("Edit", "EditStudent", new {Sid=student.Sid})
